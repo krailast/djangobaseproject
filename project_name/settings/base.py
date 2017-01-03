@@ -13,12 +13,12 @@ ROOT_DIR = os.path.dirname(BASE_DIR)
 path.append(ROOT_DIR)
 
 # Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/{{ docs_version }}/howto/deployment/checklist/
+# See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get(
     'SECRET_KEY',
-    '{{ secret_key }}'
+    'nphelq+ai(w2e^z4!!e=+g0ztrrdden)ti5)+k57ti56$8$l*t'
 )
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -46,7 +46,7 @@ LOCAL_APPS = (
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
-MIDDLEWARE_CLASSES = (
+MIDDLEWARE = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -57,7 +57,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.security.SecurityMiddleware',
 )
 
-ROOT_URLCONF = '{{ project_name }}.urls'
+ROOT_URLCONF = 'mtaxi.urls'
 
 TEMPLATES = [
     {
@@ -75,16 +75,16 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = '{{ project_name }}.wsgi.application'
+WSGI_APPLICATION = 'mtaxi.wsgi.application'
 
 
 # Database
-# https://docs.djangoproject.com/en/{{ docs_version }}/ref/settings/#databases
+# https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.environ.get('db_name', '{{ project_name }}'),
-        'USER': os.environ.get('db_user', '{{ project_name }}'),
+        'NAME': os.environ.get('db_name', 'mtaxi'),
+        'USER': os.environ.get('db_user', 'postgres'),
         'PASSWORD': os.environ.get('db_pwd', ''),
         'HOST': os.environ.get('db_host', 'localhost'),
         'PORT': os.environ.get('db_port', ''),
@@ -92,7 +92,7 @@ DATABASES = {
 }
 
 # Internationalization
-# https://docs.djangoproject.com/en/{{ docs_version }}/topics/i18n/
+# https://docs.djangoproject.com/en/1.6/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
 
@@ -106,11 +106,11 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/{{ docs_version }}/howto/static-files/
+# https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
 
-# https://docs.djangoproject.com/en/{{ docs_version }}/ref/settings/#static-root
+# https://docs.djangoproject.com/en/1.6/ref/settings/#static-root
 STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
 
 STATICFILES_DIRS = (
@@ -118,10 +118,10 @@ STATICFILES_DIRS = (
 )
 
 # MEDIA CONFIGURATION
-# https://docs.djangoproject.com/en/{{ docs_version }}/ref/settings/#media-root
+# https://docs.djangoproject.com/en/1.6/ref/settings/#media-root
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-# https://docs.djangoproject.com/en/{{ docs_version }}/ref/settings/#media-url
+# https://docs.djangoproject.com/en/1.6/ref/settings/#media-url
 MEDIA_URL = '/media/'
 
 LOGGING = {
